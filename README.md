@@ -31,6 +31,7 @@ The agent demonstrates a complete Retrieval-Augmented Generation (RAG) pipeline 
 
 
 git clone [https://github.com/Mwambama/cf_ai_coursegpt_lite.git](https://github.com/Mwambama/cf_ai_coursegpt_lite.git)
+
 cd cf_ai_coursegpt_lite
 
 ### 2. Install dependency
@@ -42,5 +43,18 @@ cd cf_ai_coursegpt_lite
 project requires three Cloudflare bindings
   which sets up wrangler.toml file but must be created first
 
-  
+A. Create the Vectorize Index (for RAG):
 
+B. Add Bindings to wrangler.toml
+
+4. Run Locally  
+
+(to your Cloudflare account to get a live URL)
+
+npm run dev
+# or
+npm run start
+
+5. Deploy
+
+npm run deploy
