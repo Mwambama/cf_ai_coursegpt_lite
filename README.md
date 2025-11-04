@@ -47,14 +47,14 @@ A. Create the Vectorize Index (for RAG):
 
 B. Add Bindings to wrangler.toml
 
-4. Run Locally  
+### Run Locally  
 
 (to your Cloudflare account to get a live URL)
 
 npm run dev
-# or
+or
 npm run start
 
-5. Deploy
+## Deploy
 
 npm run deploy
