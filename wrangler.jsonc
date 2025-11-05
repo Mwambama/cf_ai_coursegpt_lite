@@ -1,48 +1,49 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "cf_ai_coursegpt_lite",
-  "main": "src/index.ts",
-  "compatibility_date": "2025-11-01",
-
-  /**
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "cf_ai_coursegpt_lite",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-11-01",
+	/**
    * Migrations for your Agent's Durable Object state.
    */
-  "migrations": [
-    {
-      "tag": "v1",
-      "new_sqlite_classes": [
-        "TutorAgent"
-      ]
-    }
-  ],
-
-  /**
+	"migrations": [
+		{
+			"tag": "v1",
+			"new_sqlite_classes": [
+				"TutorAgent"
+			]
+		}
+	],
+	/**
    * Durable Object binding for your Agent.
    * This gives the agent its memory.
    */
-  "durable_objects": {
-    "bindings": [
-      {
-        "name": "TUTORAGENT",
-        "class_name": "TutorAgent"
-      }
-    ]
-  },
-
-  /**
+	"durable_objects": {
+		"bindings": [
+			{
+				"name": "TUTORAGENT",
+				"class_name": "TutorAgent"
+			}
+		]
+	},
+	/**
    * AI binding for the LLM.
    */
-  "ai": {
-    "binding": "AI"
-  },
-
-  /**
+	"ai": {
+		"binding": "AI"
+	},
+	/**
    * Vectorize binding for the RAG knowledge base.
    */
-  "vectorize": [
-    {
-      "binding": "COURSE_NOTES_INDEX",
-      "index_name": "course-notes"
-    }
-  ]
+	"vectorize": [
+		{
+			"binding": "COURSE_NOTES_INDEX",
+			"index_name": "course-notes"
+		},
+		{
+			"binding": "COURSE_NOTES_INDEX",
+			"index_name": "course-notes",
+			"remote": true
+		}
+	]
 }

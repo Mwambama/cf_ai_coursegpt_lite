@@ -69,7 +69,6 @@
     import {Agent, unstable_callable as callabale, callable, type  AgentNamespace } from 'agents';
 
 	// this the data that will be saved in the durable object
-
 	/**
 	 *  Defining the structure of a single message in the chat history
 	 */
@@ -103,8 +102,8 @@
 	}
 
 
-	   // Defining the TutorAgent class that extends the Agent class
-	   export class TutorAgent extends Agent<Env, TutorState> {
+	             // Defining the TutorAgent class that extends the Agent class
+	         export class TutorAgent extends Agent<Env, TutorState> {
                  
         /**
 		 * The constructor initializes the TutorAgent with its context and environment
