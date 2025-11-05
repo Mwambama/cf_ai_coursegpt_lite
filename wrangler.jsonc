@@ -29,5 +29,20 @@
     ]
   },
 
+  /**
+   * AI binding for the LLM.
+   */
+  "ai": {
+    "binding": "AI"
+  },
 
+  /**
+   * Vectorize binding for the RAG knowledge base.
+   */
+  "vectorize": [
+    {
+      "binding": "COURSE_NOTES_INDEX",
+      "index_name": "course-notes"
+    }
+  ]
 }
