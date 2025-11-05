@@ -103,8 +103,6 @@
 	}
 
 
-	          
-
 	   // Defining the TutorAgent class that extends the Agent class
 	   export class TutorAgent extends Agent<Env, TutorState> {
                  
@@ -120,13 +118,27 @@
 
 				  /**
 				   * adding new course materials to the Vectorize knowledge base
-				   * this is the "R" ( retriveal) part of the RAG architecture
+				   * this is the "R" ( retriveal) part of the RAG
+				   * insert the vector and material into this.env.COURSE_NOTES_INDEX
 				   */
 				  @callable() 
-				  async addCourseMaterial(material: string): Promise<void> {
+				  async addCourseMaterial(material: string) {
 
 					console.log(`Adding material: ${material.substring(0, 20)}...`);
-					return { success: true };
-
+					    return { success: true };
 				  }
-	   }
+
+				  /**
+				   * Asks a question to the agent.
+				   * This is the "A" (Augmented) and "G" (Generation) part of RAG.
+				   */
+				  @callable()
+				  async askQuestion(query: string): Promise<string> {
+					// TODO:
+					// 1. Get relevant context from this.env.COURSE_NOTES_INDEX based on the 'query'
+					// 2. Use this.env.AI to generate an answer using the retrieved context
+					
+					console.log(`Answering question: ${query}`);
+					return "This is a placeholder answer.";
+				  }
+         }
