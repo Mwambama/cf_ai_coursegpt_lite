@@ -3,6 +3,10 @@
 	"name": "cf_ai_coursegpt_lite",
 	"main": "src/index.ts",
 	"compatibility_date": "2025-11-01",
+	 
+	"compatibility_flags": [
+    "nodejs_compat"
+  ],
 	/**
    * Migrations for your Agent's Durable Object state.
    */
